@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="HomePage" value="Home page" />
+    <text name="About" value="About" />
+    <text name="WellcomeMessage" value="Welcome to Plenumsoft!" />
+    <text name="FormIsNotValidMessage" value="Form is not valid. Please check and fix errors." />
+    <text name="TenantNameCanNotBeEmpty" value="Tenant name can not be empty" />
+    <text name="InvalidUserNameOrPassword" value="Invalid user name or password" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="There is no tenant defined with name {0}" />
+    <text name="TenantIsNotActive" value="Tenant {0} is not active." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="User {0} is not active and can not log in." />
+    <text name="UserEmailIsNotConfirmedAndCanNotLogin">Your email address is not confirmed. You can not login.</text>
+    <text name="UserLockedOutMessage">The user account has been locked out. Please try again later.</text>
+    <text name="PleaseEnterLoginInformation" value="Please enter login information" />
+    <text name="TenancyName" value="Tenancy name" />
+    <text name="UserNameOrEmail" value="User name or email" />
+    <text name="Password" value="Password" />
+    <text name="RememberMe" value="Remember me" />
+    <text name="LogIn" value="Log in" />
+    <text name="LoginFailed" value="Login failed!" />
+    <text name="NameSurname" value="Name surname" />
+    <text name="UserName" value="User name" />
+    <text name="Name" value="Name" />
+    <text name="Surname" value="Surname" />
+    <text name="EmailAddress" value="Email address" />
+    <text name="Tenants" value="Tenants" />
+    <text name="SavedSuccessfully" value="Saved successfully" />
+    <text name="CreateNewTenant" value="Create new tenant" />
+    <text name="AdminEmailAddress" value="Admin email address" />
+    <text name="TenantName_Regex_Description" value="Tenant name must be at least 2 chars, starts with a letter and continue with letter, number, dash or underscore." />
+    <text name="DefaultPasswordIs" value="Default password is {0}" />
+    <text name="CanBeEmptyToLoginAsHost" value="Can be empty to login as host." />
+    <text name="Register" value="Register" />
+    <text name="OrLoginWith" value="Or login with" />
+    <text name="WaitingForActivationMessage" value="Your account is waiting to be activated by system admin." />
+    <text name="TenantSelection" value="Tenant Selection" />
+    <text name="TenantSelection_Detail" value="Please select one of the following tenants." />
+    <text name="Logout" value="Logout" />
+    <text name="RegisterFormUserNameInvalidMessage">Please don't enter an email address for username.</text>
+    <text name="DatabaseConnectionString" value="Database connection string" />
+    <text name="Users" value="Users" />
+    <text name="IsActive" value="Is active" />
+    <text name="FullName" value="Full name" />
+    <text name="Optional" value="Optional" />
+    <text name="LeaveEmptyToSwitchToHost">Leave empty to switch to the host</text>
+    <text name="CurrentTenant">Current tenant</text>
+    <text name="NotSelected">Not selected</text>
+    <text name="Change">Change</text>
+    <text name="ChangeTenant">Change tenant</text>
+    <text name="MultiLevelMenu">Multi Level Menu</text>
+    <text name="Back">Back</text>
+    <text name="SuccessfullyRegistered">Successfully registered</text>
+    <text name="WaitingForEmailActivation">Your email address should be activated</text>
+    <text name="DisplayName">Display Name</text>
+    <text name="Actions">Actions</text>
+    <text name="CouldNotCompleteLoginOperation">Could not complete login operation. Please try again later.</text>
+    <text name="CouldNotValidateExternalUser">Could not validate external user</text>
+    <text name="EditTenant">Edit tenant</text>
+    <text name="EditUser">Edit user</text>
+    <text name="TenantIdIsNotActive{0}">TenantId {0} is not active</text>
+    <text name="UnknownTenantId{0}">Unknown tenantId {0}</text>
+    <text name="ThisFieldIsRequired">This field is required</text>
+    <text name="PleaseWait">Please wait...</text>
+    <text name="Administration">Administration</text>
+    <text name="ClearAll">Clear all</text>
+    <text name="ClearOthers">Clear others</text>
+    <text name="LabelOptions">Label options</text>
+    <text name="Permissions">Permissions</text>
+    <text name="RoleDescription">Role description</text>
+    <text name="Refresh">Refresh</text>
+    <text name="Create">Create</text>
+    <text name="UserDetails">User details</text>
+    <text name="UserRoles">User roles</text>
+    <text name="ConfirmPassword">Confirm password</text>
+    <!-- General-->
+    <text name="DeleteTitleConfirmation">Permanently delete</text>
+    <text name="DeleteMessageConfirmation"> Are you sure you want to delete this record?</text>
+    <text name="DeleteSuccessfully"> Deleted successfully</text>
+    <text name="Yes">Yes</text>
+    <text name="No">No</text>
+    <text name="FoundNoResult">No results found</text>
+    <text name="PreviousLabel">Previous </text>
+    <text name="NextLabel">Next</text>
+    <text name="Filter">Search </text>
+    <text name="Edit">Edit</text>
+    <text name="Delete">Delete</text>
+    <text name="Save" value="Save" />
+    <text name="Cancel" value="Cancel" />
+	  <!-- Users-->
+    <text name="CreateNewUser" value="Create new user" />
+    <!-- Roles-->
+    <text name="Roles">Roles</text>
+    <text name="ListRoles">List of Roles</text>
+    <text name="RoleName">Role Name</text>
+    <text name="CreateNewRole">Create new Role</text>
+    <text name="EditRole">Edit Role</text>
+    <!-- catalog of contries-->
+    <text name="Countries">Countries</text>
+    <text name="ListCountries">List o Contries</text>
+    <text name="CountryId">Key</text>
+    <text name="CountryName">Contry</text>
+    <text name="CountryAbreviation">Abbreviation</text>
+    <text name="CreateNewCountry">Create new Country</text>
+    <text name="EditCountry">Edit Country</text>
+    <!-- catalog of estates-->
+    <text name="Estates">States</text>
+    <text name="ListEstates">List of States</text>
+    <text name="EstateId">Key</text>
+    <text name="EstateName">State</text>
+    <text name="EstateAbreviation">Abbreviation</text>
+    <text name="CreateNewEstate">Create new State</text>
+    <text name="EditEstate">Edit State</text>
+    <!-- catalog of cities-->
+    <text name="Cities">Cities</text>
+    <text name="ListCities">List of Cities</text>
+    <text name="CityId">Key</text>
+    <text name="CityName">City</text>
+    <text name="CityAbreviation">Abbreviation</text>
+    <text name="CreateNewCity">Create new City</text>
+    <text name="EditCity">Edit City</text>
+    <!--Menu items-->
+    <text name="SecurityMenu">Security</text>
+    <text name="CatalogsMenu">Catalogs</text>
+  </texts>
+</localizationDictionary>

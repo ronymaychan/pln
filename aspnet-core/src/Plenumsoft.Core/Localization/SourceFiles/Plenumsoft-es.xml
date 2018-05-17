@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="es">
+  <texts>
+    <text name="HomePage" value="Página de inicio" />
+    <text name="About" value="Acerca de" />
+    <text name="WellcomeMessage" value="Bienvenido a WMS!" />
+    <text name="FormIsNotValidMessage" value="Formulario no es válido. Por favor, compruebe y corrija los errores." />
+    <text name="TenantNameCanNotBeEmpty" value="Nombre de la empresa no puede estar vacío" />
+    <text name="InvalidUserNameOrPassword" value="Usuario o contraseña invalido" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="No hay empresa definida con el nombre {0}" />
+    <text name="TenantIsNotActive" value="La empresa {0} no está activa." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="El usuario {0} no está activo y no puede conectarse." />
+    <text name="UserEmailIsNotConfirmedAndCanNotLogin">Su dirección de correo electrónico no está confirmada. No puedes iniciar sesión</text>
+    <text name="UserLockedOutMessage">La cuenta de usuario ha sido bloqueada. Por favor, inténtelo de nuevo más tarde.</text>
+    <text name="PleaseEnterLoginInformation" value="Por favor, introduzca la información de inicio de sesión" />
+    <text name="TenancyName" value="Nombre de la empresa" />
+    <text name="UserNameOrEmail" value="Nombre de usuario o correo electrónico" />
+    <text name="Password" value="Contraseña" />
+    <text name="RememberMe" value="Recuérdame" />
+    <text name="LogIn" value="Iniciar sesión" />
+    <text name="LoginFailed" value="¡Error de inicio de sesion!" />
+    <text name="NameSurname" value="Nombre Apellido" />
+    <text name="UserName" value="Nombre de usuario" />
+    <text name="Name" value="Nombre" />
+    <text name="Surname" value="Apellido" />
+    <text name="EmailAddress" value="Dirección de correo electrónico" />
+    <text name="Tenants" value="Empresas" />
+    <text name="SavedSuccessfully" value="Guardado correctamente" />
+    <text name="CreateNewTenant" value="Crear nueva empresa" />
+    <text name="AdminEmailAddress" value="Dirección de correo electrónico del administrador" />
+    <text name="TenantName_Regex_Description" value="El nombre de la empresa debe ser de al menos 2 caracteres, empieza con una letra y continua con una letra, número, guión o un guión bajo." />
+    <text name="DefaultPasswordIs" value="La contraseña por defecto es {0}" />
+    <text name="CanBeEmptyToLoginAsHost" value="Puede estar vacía para iniciar la sesión como anfitrión." />
+    <text name="Register" value="Registro" />
+    <text name="OrLoginWith" value="o iniciar sesión con" />
+    <text name="WaitingForActivationMessage" value="Su cuenta está en espera de ser activada por el administrador del sistema." />
+    <text name="TenantSelection" value="Selección de Empresa" />
+    <text name="TenantSelection_Detail" value="Por favor seleccione una de las siguientes empresas." />
+    <text name="Logout" value="Cerrar sesión" />
+    <text name="RegisterFormUserNameInvalidMessage">Por favor, no ingrese una dirección de correo electrónico para el nombre de usuario.</text>
+    <text name="DatabaseConnectionString" value="Cadena de conexión de la base" />
+    <text name="Users" value="Usuarios" />
+    <text name="IsActive" value="Activo" />
+    <text name="FullName" value="Nombre completo" />
+    <text name="Optional" value="Optional" />
+    <text name="LeaveEmptyToSwitchToHost">Deje vacío para cambiar al host</text>
+    <text name="CurrentTenant">Empresa actual</text>
+    <text name="NotSelected">No seleccionado</text>
+    <text name="Change">Cambiar</text>
+    <text name="ChangeTenant">Cambiar empresa</text>
+    <text name="MultiLevelMenu">Multi Level Menu</text>
+    <text name="Back">Atrás</text>
+    <text name="SuccessfullyRegistered">Registrado exitosamente</text>
+    <text name="WaitingForEmailActivation">Tu dirección de correo electrónico debe estar activada</text>
+    <text name="DisplayName">Nombre a mostrar</text>
+    <text name="Actions">Acciones</text>
+    <text name="CouldNotCompleteLoginOperation">No se pudo completar la operación de inicio de sesión. Por favor, inténtelo de nuevo más tarde.</text>
+    <text name="CouldNotValidateExternalUser">No se pudo validar usuario externo</text>
+    <text name="EditTenant">Editar empresa</text>
+    <text name="EditUser">Edditar usuario</text>
+    <text name="TenantIdIsNotActive{0}">TenantId {0} no esta activo</text>
+    <text name="UnknownTenantId{0}">Desconocido tenantId {0}</text>
+    <text name="ThisFieldIsRequired">Campo requerido</text>
+    <text name="PleaseWait">Por favor espere...</text>
+    <text name="Administration">Adminstración</text>
+    <text name="ClearAll">Limpiar todo</text>
+    <text name="ClearOthers">Borrar otros</text>
+    <text name="LabelOptions">Opciones de etiqueta</text>
+    <text name="Permissions">Permisos</text>
+    <text name="RoleDescription">Descripción del Rol</text>
+    <text name="Refresh">Actualizar</text>
+    <text name="Create">Crear</text>
+    <text name="UserDetails">Detalles del usuario</text>
+    <text name="UserRoles">Roles del usuario</text>
+    <text name="ConfirmPassword">confirmar password</text>
+    <!-- General-->
+    <text name="DeleteTitleConfirmation">Eliminar permanentemente</text>
+    <text name="DeleteMessageConfirmation">¿Esta seguro que desea eliminar este registro?</text>
+    <text name="DeleteSuccessfully">Eliminado correctamente</text>
+    <text name="Yes">Si</text>
+    <text name="No">No</text>
+    <text name="FoundNoResult">No se encontraron resultados</text>
+    <text name="PreviousLabel">Anterior</text>
+    <text name="NextLabel">Siguiente</text>
+    <text name="Filter">Buscar</text>
+    <text name="Edit">Editar</text>
+    <text name="Delete">Eliminar</text>
+    <text name="Save" value="Guardar" />
+    <text name="Cancel" value="Cancelar" />
+	<!-- Users-->
+    <text name="CreateNewUser" value="Create new user" />
+    <!-- Roles-->
+    <text name="Roles">Roles</text>
+    <text name="ListRoles">Lista de roles</text>
+    <text name="RoleName">Role Name</text>
+    <text name="CreateNewRole">Create new role</text>
+    <text name="EditRole">Edit role</text>
+    <!-- catalog of contries-->
+    <text name="Countries">Países</text>
+    <text name="ListCountries">Lista de Países</text>
+    <text name="CountryId">Clave</text>
+    <text name="CountryName">País</text>
+    <text name="CountryAbreviation">Abreviación</text>
+    <text name="CreateNewCountry">Crear nuevo país</text>
+    <text name="EditCountry">Editar país</text>
+    <!-- catalog of estates-->
+    <text name="Estates">Estados</text>
+    <text name="ListEstates">Lista de Estados</text>
+    <text name="EstateId">Clave</text>
+    <text name="EstateName">Estado</text>
+    <text name="EstateAbreviation">Abreviación</text>
+    <text name="CreateNewEstate">Crear nuevo estado</text>
+    <text name="EditEstate">Editar estado</text>
+    <!-- catalog of cities-->
+    <text name="Cities">Ciudades</text>
+    <text name="ListCities">Lista de Ciudades</text>
+    <text name="CityId">Clave</text>
+    <text name="CityName">Ciudad</text>
+    <text name="CityAbreviation">Abreviación</text>
+    <text name="CreateNewCity">Crear nuevo ciudad</text>
+    <text name="EditCity">Editar ciudad</text>
+    <!--Menu items-->
+    <text name="SecurityMenu">Seguridad</text>
+    <text name="CatalogsMenu">Catálogos</text>
+  </texts>
+</localizationDictionary>
