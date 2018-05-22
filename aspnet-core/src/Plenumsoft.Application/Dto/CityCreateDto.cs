@@ -9,6 +9,6 @@ namespace Plenumsoft.Dto
         public string Name { get; set; }
         public string Abreviation { get; set; }
         public bool? IsActive { get; set; }
-        public string EstateId { get; set; }
+        public string StateId { get; set; }
     }
 }

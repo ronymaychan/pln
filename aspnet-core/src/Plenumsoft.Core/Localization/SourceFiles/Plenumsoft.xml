@@ -95,22 +95,22 @@
     <text name="RoleName">Role Name</text>
     <text name="CreateNewRole">Create new Role</text>
     <text name="EditRole">Edit Role</text>
-    <!-- catalog of contries-->
+    <!-- catalog of countries-->
     <text name="Countries">Countries</text>
-    <text name="ListCountries">List o Contries</text>
+    <text name="ListCountries">List o Countries</text>
     <text name="CountryId">Key</text>
-    <text name="CountryName">Contry</text>
+    <text name="CountryName">Country</text>
     <text name="CountryAbreviation">Abbreviation</text>
     <text name="CreateNewCountry">Create new Country</text>
     <text name="EditCountry">Edit Country</text>
-    <!-- catalog of estates-->
-    <text name="Estates">States</text>
-    <text name="ListEstates">List of States</text>
-    <text name="EstateId">Key</text>
-    <text name="EstateName">State</text>
-    <text name="EstateAbreviation">Abbreviation</text>
-    <text name="CreateNewEstate">Create new State</text>
-    <text name="EditEstate">Edit State</text>
+    <!-- catalog of States-->
+    <text name="States">States</text>
+    <text name="ListStates">List of States</text>
+    <text name="StateId">Key</text>
+    <text name="StateName">State</text>
+    <text name="StateAbreviation">Abbreviation</text>
+    <text name="CreateNewState">Create new State</text>
+    <text name="EditState">Edit State</text>
     <!-- catalog of cities-->
     <text name="Cities">Cities</text>
     <text name="ListCities">List of Cities</text>

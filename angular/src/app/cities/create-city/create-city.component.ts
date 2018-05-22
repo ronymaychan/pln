@@ -1,15 +1,14 @@
 import { Component, ViewChild, Injector, Output, EventEmitter, ElementRef, OnInit } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
-import { CityServiceProxy, ListResultDtoOfPermissionDto, AuthenticateResultModel, CityDto, CityCreateDto, ExternalLoginProviderInfoModel, EstateServiceProxy } from '@shared/service-proxies/service-proxies';
+import { CityServiceProxy, ListResultDtoOfPermissionDto, AuthenticateResultModel, CityDto, CityCreateDto, ExternalLoginProviderInfoModel, StateServiceProxy } from '@shared/service-proxies/service-proxies';
 import { AppComponentBase } from '@shared/app-component-base';
-import { CountryDto, PagedResultDtoOfCountryDto, PagedResultDtoOfEstateDto } from '../../../shared/service-proxies/service-proxies';
-import { CountryServiceProxy, EstateDto } from 'shared/service-proxies/service-proxies';
+import { CountryDto, PagedResultDtoOfCountryDto, PagedResultDtoOfStateDto } from '../../../shared/service-proxies/service-proxies';
+import { CountryServiceProxy, StateDto } from 'shared/service-proxies/service-proxies';
 
 
 @Component({
   selector: 'create-city-modal',
-  templateUrl: './create-city.component.html',
-  styleUrls: ['./create-city.component.css']
+  templateUrl: './create-city.component.html'
 })
 export class CreateCityComponent extends AppComponentBase implements OnInit {
 
@@ -23,7 +22,7 @@ export class CreateCityComponent extends AppComponentBase implements OnInit {
   countryId:string = "";
 
   countries: CountryDto[] = [];
-  estates: EstateDto[] = []; 
+  estates: StateDto[] = []; 
 
 
   @Output() modalSave: EventEmitter<any> = new EventEmitter<any>();
@@ -31,7 +30,7 @@ export class CreateCityComponent extends AppComponentBase implements OnInit {
       injector: Injector,
       private _service: CityServiceProxy,
       private _countryService : CountryServiceProxy,
-      private _estateService : EstateServiceProxy
+      private _estateService : StateServiceProxy
   ) {
       super(injector);
   }
@@ -73,9 +72,9 @@ export class CreateCityComponent extends AppComponentBase implements OnInit {
       this.modal.hide();
   }
 
-  populateEstates(){
+  populateStates(){
     this._estateService.getAll("",undefined, this.countryId,0,10000)
-        .subscribe((result : PagedResultDtoOfEstateDto)=>{
+        .subscribe((result : PagedResultDtoOfStateDto)=>{
             this.estates = result.items;
         });
   }

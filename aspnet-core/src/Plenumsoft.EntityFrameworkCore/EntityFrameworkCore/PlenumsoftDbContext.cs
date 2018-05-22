@@ -10,8 +10,9 @@ namespace Plenumsoft.EntityFrameworkCore
     {
         /* Define a DbSet for each entity of the application */
         public DbSet<Domain.Country> Countries { get; set; }
-        public DbSet<Domain.Estate> Estates { get; set; }
+        public DbSet<Domain.State> States { get; set; }
         public DbSet<Domain.City> Cities { get; set; }
+        public DbSet<Domain.Category> Categories { get; set; }
         public PlenumsoftDbContext(DbContextOptions<PlenumsoftDbContext> options)
             : base(options)
         {
@@ -20,8 +21,8 @@ namespace Plenumsoft.EntityFrameworkCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new Mapping.CategoryEntityConfiguration());
-            modelBuilder.ApplyConfiguration(new Mapping.ContryEntityConfiguration());
-            modelBuilder.ApplyConfiguration(new Mapping.EstateEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new Mapping.CountryEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new Mapping.StateEntityConfiguration());
             modelBuilder.ApplyConfiguration(new Mapping.CityEntityConfiguration());
         }
     }

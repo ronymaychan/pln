@@ -13,21 +13,24 @@ namespace Plenumsoft
         {
             Configuration.Modules.AbpAutoMapper().Configurators.Add(config => {
 
-                //Contry Mapping 
+                //Country Mapping 
                 config.CreateMap<Domain.Country, Dto.CountryDto>().ReverseMap();
 
-                //Estate Mapping
-                config.CreateMap<Domain.Estate, Dto.EstateDto>()
+                //State Mapping
+                config.CreateMap<Domain.State, Dto.StateDto>()
                     .ForMember(x => x.CountryName, opt => opt.MapFrom(x => x.Country.Abreviation));
-                config.CreateMap<Dto.EstateDto, Domain.Estate>();
-                config.CreateMap<Dto.EstateCreateDto, Domain.Estate>().ReverseMap();
+                config.CreateMap<Dto.StateDto, Domain.State>();
+                config.CreateMap<Dto.StateCreateDto, Domain.State>().ReverseMap();
 
                 //City Mapping
                 config.CreateMap<Domain.City, Dto.CityDto>()
-                    .ForMember(x => x.EstateName, opt => opt.MapFrom(x => x.Estate.Abreviation))
-                    .ForMember(x => x.CountryName, opt => opt.MapFrom(x => x.Estate.Country.Abreviation));
+                    .ForMember(x => x.StateName, opt => opt.MapFrom(x => x.State.Abreviation))
+                    .ForMember(x => x.CountryName, opt => opt.MapFrom(x => x.State.Country.Abreviation));
                 config.CreateMap<Dto.CityDto, Domain.City>();
                 config.CreateMap<Dto.CityCreateDto, Domain.City>().ReverseMap();
+
+
+                config.CreateMap<Domain.Category, Dto.CategoryDto>().ReverseMap();
 
             });
         }

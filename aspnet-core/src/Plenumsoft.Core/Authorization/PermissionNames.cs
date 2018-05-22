@@ -10,7 +10,7 @@
 
         public const string Pages_Countries = "Pages.Countries";
 
-        public const string Pages_Estates = "Pages.Estates";
+        public const string Pages_States = "Pages.States";
 
         public const string Pages_Cities = "Pages.Cities";
     }

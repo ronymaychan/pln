@@ -11,21 +11,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Plenumsoft.Base.Estates
+namespace Plenumsoft.Base.States
 {
     [AbpAuthorize(PermissionNames.Pages_Countries)]
-    public class EstateAppService : CrudAppService<Estate, EstateDto, string, EstateInputDto, EstateCreateDto>, IEstatesAppService
+    public class StateAppService : CrudAppService<State, StateDto, string, StateInputDto, StateCreateDto>, IStatesAppService
     {
-        public EstateAppService(IRepository<Estate, string> repository) : base(repository)
+        public StateAppService(IRepository<State, string> repository) : base(repository)
         {
         }
 
-        protected override IQueryable<Estate> ApplySorting(IQueryable<Estate> query, EstateInputDto input)
+        protected override IQueryable<State> ApplySorting(IQueryable<State> query, StateInputDto input)
         {
             return query.OrderBy(x => x.Country.Name).OrderBy(x => x.Name);
         }
 
-        protected override IQueryable<Estate> CreateFilteredQuery(EstateInputDto input)
+        protected override IQueryable<State> CreateFilteredQuery(StateInputDto input)
         {
             var query = Repository.GetAllIncluding(e => e.Country);
 

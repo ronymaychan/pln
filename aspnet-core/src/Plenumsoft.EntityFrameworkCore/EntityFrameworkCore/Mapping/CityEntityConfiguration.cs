@@ -16,7 +16,7 @@ namespace Plenumsoft.Mapping
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
             builder.Property(p => p.Abreviation).HasMaxLength(100).IsRequired();
             builder.Property(p => p.IsActive).IsRequired();
-            builder.HasOne(p => p.Estate).WithMany().HasForeignKey(x => x.EstateId);
+            builder.HasOne(p => p.State).WithMany().HasForeignKey(x => x.StateId);
         }
     }
 }

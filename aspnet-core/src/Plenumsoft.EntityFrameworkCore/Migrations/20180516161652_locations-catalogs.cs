@@ -306,7 +306,7 @@ namespace Plenumsoft.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Estates",
+                name: "States",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
@@ -317,9 +317,9 @@ namespace Plenumsoft.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Estates", x => x.Id);
+                    table.PrimaryKey("PK_States", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Estates_Countries_CountryId",
+                        name: "FK_States_Countries_CountryId",
                         column: x => x.CountryId,
                         principalTable: "Countries",
                         principalColumn: "Id",
@@ -332,7 +332,7 @@ namespace Plenumsoft.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     Abreviation = table.Column<string>(maxLength: 100, nullable: false),
-                    EstateId = table.Column<string>(nullable: true),
+                    StateId = table.Column<string>(nullable: true),
                     IsActive = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(maxLength: 100, nullable: false)
                 },
@@ -340,9 +340,9 @@ namespace Plenumsoft.Migrations
                 {
                     table.PrimaryKey("PK_Cities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Cities_Estates_EstateId",
-                        column: x => x.EstateId,
-                        principalTable: "Estates",
+                        name: "FK_Cities_States_StateId",
+                        column: x => x.StateId,
+                        principalTable: "States",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -368,13 +368,13 @@ namespace Plenumsoft.Migrations
                 column: "EditionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cities_EstateId",
+                name: "IX_Cities_StateId",
                 table: "Cities",
-                column: "EstateId");
+                column: "StateId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Estates_CountryId",
-                table: "Estates",
+                name: "IX_States_CountryId",
+                table: "States",
                 column: "CountryId");
 
             migrationBuilder.AddForeignKey(
@@ -420,7 +420,7 @@ namespace Plenumsoft.Migrations
                 name: "Cities");
 
             migrationBuilder.DropTable(
-                name: "Estates");
+                name: "States");
 
             migrationBuilder.DropTable(
                 name: "Countries");

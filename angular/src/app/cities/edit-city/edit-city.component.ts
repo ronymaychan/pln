@@ -1,14 +1,13 @@
 import { Component, ViewChild, Injector, Output, EventEmitter, ElementRef, OnInit } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
-import { CityServiceProxy, CityDto, CityCreateDto, ListResultDtoOfPermissionDto, CountryDto, PagedResultDtoOfEstateDto } from '@shared/service-proxies/service-proxies';
+import { CityServiceProxy, CityDto, CityCreateDto, ListResultDtoOfPermissionDto, CountryDto, PagedResultDtoOfStateDto } from '@shared/service-proxies/service-proxies';
 import { AppComponentBase } from '@shared/app-component-base';
-import { CountryServiceProxy, PagedResultDtoOfCountryDto, EstateServiceProxy, PagedResultDtoOfCityDto } from '../../../shared/service-proxies/service-proxies';
-import { EstateDto } from 'shared/service-proxies/service-proxies';
+import { CountryServiceProxy, PagedResultDtoOfCountryDto, StateServiceProxy, PagedResultDtoOfCityDto } from '../../../shared/service-proxies/service-proxies';
+import { StateDto } from 'shared/service-proxies/service-proxies';
 
 @Component({
   selector: 'app-edit-city',
-  templateUrl: './edit-city.component.html',
-  styleUrls: ['./edit-city.component.css']
+  templateUrl: './edit-city.component.html'
 })
 export class EditCityComponent extends AppComponentBase implements OnInit {
 
@@ -22,7 +21,7 @@ export class EditCityComponent extends AppComponentBase implements OnInit {
   countryId: string = "";
 
   countries: CountryDto[] = [];
-  estates: EstateDto[] = [];
+  estates: StateDto[] = [];
 
 
   @Output() modalSave: EventEmitter<any> = new EventEmitter<any>();
@@ -30,7 +29,7 @@ export class EditCityComponent extends AppComponentBase implements OnInit {
       injector: Injector,
       private _service: CityServiceProxy,
       private _countryService :CountryServiceProxy,
-      private _estateService: EstateServiceProxy
+      private _estateService: StateServiceProxy
   ) {
       super(injector);
   }
@@ -47,13 +46,13 @@ export class EditCityComponent extends AppComponentBase implements OnInit {
           .finally(() => {
               this.active = true;
               this.modal.show();
-              this.getContry(this.item.estateId);
+              this.getContry(this.item.stateId);
           })
           .subscribe((result: CityDto) => {
             this.item = new CityCreateDto();
             this.item.id = result.id;
             this.item.abreviation = result.abreviation;
-            this.item.estateId = result.estateId;
+            this.item.stateId = result.stateId;
             this.item.isActive = result.isActive;
             this.item.name = result.name;
           });
@@ -79,9 +78,9 @@ export class EditCityComponent extends AppComponentBase implements OnInit {
       this.modal.hide();
   }
 
-  populateEstates(){
+  populateStates(){
     this._estateService.getAll("",undefined, this.countryId,0,10000)
-        .subscribe((result : PagedResultDtoOfEstateDto)=>{
+        .subscribe((result : PagedResultDtoOfStateDto)=>{
             this.estates = result.items;
         });
   }
@@ -89,7 +88,7 @@ export class EditCityComponent extends AppComponentBase implements OnInit {
   getContry(estateId: string){
       this._estateService.get(estateId)
           .finally(()=>{
-            this.populateEstates();
+            this.populateStates();
           })
           .subscribe((result)=>{
               this.countryId = result.countryId;

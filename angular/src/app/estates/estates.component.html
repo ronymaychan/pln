@@ -3,7 +3,7 @@
       <div class="card main-content">
           <div class="header">
               <h2>
-                  {{l('ListEstates')}}
+                  {{l('ListStates')}}
               </h2>
               <ul class="header-dropdown m-r--5">
                   <i class="fa fa-spin fa-spinner" *ngIf="isTableLoading"></i>
@@ -25,7 +25,7 @@
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input [(ngModel)]="filter" (keyup.enter)="search()" id="filtername" type="text" name="filtername" class="form-control">
-                            <label for="filtername" class="form-label">{{l("EstateName")}}</label>
+                            <label for="filtername" class="form-label">{{l("StateName")}}</label>
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,8 @@
                   <thead>
                       <tr>
                           <th>{{l('CountryName')}}</th>
-                          <th>{{l('EstateName')}}</th>
-                          <th>{{l('EstateAbreviation')}}</th>
+                          <th>{{l('StateName')}}</th>
+                          <th>{{l('StateAbreviation')}}</th>
                           <th>{{l('IsActive')}}</th>
                           <th>{{l('Actions')}}</th>
                       </tr>

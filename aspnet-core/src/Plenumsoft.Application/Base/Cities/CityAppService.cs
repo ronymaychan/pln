@@ -22,12 +22,12 @@ namespace Plenumsoft.Base.Cities
 
         protected override IQueryable<City> ApplySorting(IQueryable<City> query, CityInputDto input)
         {
-            return query.OrderBy(x => x.Estate.Country.Name).ThenBy(x => x.Estate.Name).ThenBy(x => x.Name);
+            return query.OrderBy(x => x.State.Country.Name).ThenBy(x => x.State.Name).ThenBy(x => x.Name);
         }
 
         protected override IQueryable<City> CreateFilteredQuery(CityInputDto input)
         {
-            var query = Repository.GetAllIncluding(e => e.Estate, e => e.Estate.Country);
+            var query = Repository.GetAllIncluding(e => e.State, e => e.State.Country);
 
             if (!string.IsNullOrEmpty(input.Name))
                 query = query.Where(c => c.Name.ToLower().Contains(input.Name.ToLower()));
@@ -35,11 +35,11 @@ namespace Plenumsoft.Base.Cities
             if (input.IsActive != null)
                 query = query.Where(c => c.IsActive == input.IsActive);
 
-            if (!string.IsNullOrEmpty(input.EstateId))
-                query = query.Where(c => c.EstateId == input.EstateId);
+            if (!string.IsNullOrEmpty(input.StateId))
+                query = query.Where(c => c.StateId == input.StateId);
 
             if (!string.IsNullOrEmpty(input.CountryId))
-                query = query.Where(c => c.Estate.CountryId == input.CountryId);
+                query = query.Where(c => c.State.CountryId == input.CountryId);
 
                 return query;
         }

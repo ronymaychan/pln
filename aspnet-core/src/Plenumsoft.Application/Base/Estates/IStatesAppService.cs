@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Plenumsoft.Base.Estates
+namespace Plenumsoft.Base.States
 {
-    public interface IEstatesAppService : ICrudAppService<EstateDto, string, EstateInputDto, EstateCreateDto>, IApplicationService
+    public interface IStatesAppService : ICrudAppService<StateDto, string, StateInputDto, StateCreateDto>, IApplicationService
     {
     }
 }

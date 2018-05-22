@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace Plenumsoft.Mapping
 {
-    public class EstateEntityConfiguration : IEntityTypeConfiguration<Domain.Estate>
+    public class CountryEntityConfiguration : IEntityTypeConfiguration<Domain.City>
     {
-        public void Configure(EntityTypeBuilder<Domain.Estate> builder)
+        public void Configure(EntityTypeBuilder<Domain.City> builder)
         {
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
             builder.Property(p => p.Abreviation).HasMaxLength(100).IsRequired();
             builder.Property(p => p.IsActive).IsRequired();
-            builder.HasOne(p => p.Country).WithMany().HasForeignKey(x => x.CountryId);
         }
     }
 }

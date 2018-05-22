@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Plenumsoft.Domain
 {
-    public class Estate : Abp.Domain.Entities.Entity<string>, Abp.Domain.Entities.IPassivable
+    public class State : Abp.Domain.Entities.Entity<string>, Abp.Domain.Entities.IPassivable
     {
         public string Name { get; set; }
         public string Abreviation { get; set; }

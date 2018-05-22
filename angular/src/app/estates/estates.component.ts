@@ -1,24 +1,23 @@
 import { Component, Injector, ViewChild, OnInit } from '@angular/core';
 import { PagedListingComponentBase, PagedRequestDto } from "shared/paged-listing-component-base";
-import { EstateDto, PagedResultDtoOfEstateDto, CountryServiceProxy, PagedResultDtoOfCountryDto } from "shared/service-proxies/service-proxies";
+import { StateDto, PagedResultDtoOfStateDto, CountryServiceProxy, PagedResultDtoOfCountryDto } from "shared/service-proxies/service-proxies";
 import { appModuleAnimation } from '@shared/animations/routerTransition';
 import { CreateEstateComponent } from './create-estate/create-estate.component';
 import { EditEstateComponent } from './edit-estate/edit-estate.component';
-import { EstateServiceProxy, CountryDto } from '@shared/service-proxies/service-proxies';
+import { StateServiceProxy, CountryDto } from '@shared/service-proxies/service-proxies';
 
 
 @Component({
   selector: 'app-estates',
   templateUrl: './estates.component.html',
-  styleUrls: ['./estates.component.css'],
   animations: [appModuleAnimation()]
 })
-export class EstatesComponent extends PagedListingComponentBase<EstateDto> implements OnInit  {
+export class EstatesComponent extends PagedListingComponentBase<StateDto> implements OnInit  {
 
    @ViewChild('createModal') createModal: CreateEstateComponent;
    @ViewChild('editModal') editModal: EditEstateComponent;
 	
-	items: EstateDto[] = [];
+	items: StateDto[] = [];
 	countries : CountryDto [] = [];
 	countryId: string ="";
 	filter: string = "";
@@ -26,7 +25,7 @@ export class EstatesComponent extends PagedListingComponentBase<EstateDto> imple
 
 	constructor(
 		private injector:Injector,
-		private service: EstateServiceProxy,
+		private service: StateServiceProxy,
 		private _countryService :CountryServiceProxy
 	) {
 		super(injector);
@@ -45,14 +44,14 @@ export class EstatesComponent extends PagedListingComponentBase<EstateDto> imple
 			.finally( ()=> {
 				finishedCallback();
 			})
-            .subscribe((result: PagedResultDtoOfEstateDto)=>{
+            .subscribe((result: PagedResultDtoOfStateDto)=>{
 				this.items = result.items;
 				console.log(this.items);
 				this.showPaging(result, pageNumber);
 		});
 	}
 
-	delete(item: EstateDto): void {
+	delete(item: StateDto): void {
 		abp.message.confirm(
 			this.l("DeleteMessageConfirmation"),
 			this.l("DeleteTitleConfirmation"),
@@ -75,7 +74,7 @@ export class EstatesComponent extends PagedListingComponentBase<EstateDto> imple
 		this.createModal.show();
 	}
 
-	edit(item:EstateDto): void {
+	edit(item:StateDto): void {
 		this.editModal.show(item.id);
 	}
 

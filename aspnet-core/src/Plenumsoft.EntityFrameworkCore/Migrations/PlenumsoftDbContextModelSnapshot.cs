@@ -902,6 +902,18 @@ namespace Plenumsoft.Migrations
                     b.ToTable("AbpUsers");
                 });
 
+            modelBuilder.Entity("Plenumsoft.Domain.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("Plenumsoft.Domain.City", b =>
                 {
                     b.Property<string>("Id")
@@ -911,17 +923,17 @@ namespace Plenumsoft.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<string>("EstateId");
-
                     b.Property<bool>("IsActive");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100);
 
+                    b.Property<string>("StateId");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("EstateId");
+                    b.HasIndex("StateId");
 
                     b.ToTable("Cities");
                 });
@@ -942,7 +954,7 @@ namespace Plenumsoft.Migrations
                     b.ToTable("Countries");
                 });
 
-            modelBuilder.Entity("Plenumsoft.Domain.Estate", b =>
+            modelBuilder.Entity("Plenumsoft.Domain.State", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -951,7 +963,7 @@ namespace Plenumsoft.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<string>("ContryId");
+                    b.Property<string>("CountryId");
 
                     b.Property<bool>("IsActive");
 
@@ -961,9 +973,9 @@ namespace Plenumsoft.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ContryId");
+                    b.HasIndex("CountryId");
 
-                    b.ToTable("Estates");
+                    b.ToTable("States");
                 });
 
             modelBuilder.Entity("Plenumsoft.MultiTenancy.Tenant", b =>
@@ -1155,16 +1167,16 @@ namespace Plenumsoft.Migrations
 
             modelBuilder.Entity("Plenumsoft.Domain.City", b =>
                 {
-                    b.HasOne("Plenumsoft.Domain.Estate", "Estate")
+                    b.HasOne("Plenumsoft.Domain.State", "State")
                         .WithMany()
-                        .HasForeignKey("EstateId");
+                        .HasForeignKey("StateId");
                 });
 
-            modelBuilder.Entity("Plenumsoft.Domain.Estate", b =>
+            modelBuilder.Entity("Plenumsoft.Domain.State", b =>
                 {
-                    b.HasOne("Plenumsoft.Domain.Country", "Contry")
+                    b.HasOne("Plenumsoft.Domain.Country", "Country")
                         .WithMany()
-                        .HasForeignKey("ContryId");
+                        .HasForeignKey("CountryId");
                 });
 
             modelBuilder.Entity("Plenumsoft.MultiTenancy.Tenant", b =>

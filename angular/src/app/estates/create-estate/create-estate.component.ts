@@ -1,6 +1,6 @@
 import { Component, ViewChild, Injector, Output, EventEmitter, ElementRef, OnInit } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap';
-import { EstateServiceProxy, ListResultDtoOfPermissionDto, AuthenticateResultModel, EstateCreateDto } from '@shared/service-proxies/service-proxies';
+import { StateServiceProxy, ListResultDtoOfPermissionDto, AuthenticateResultModel, StateCreateDto } from '@shared/service-proxies/service-proxies';
 import { AppComponentBase } from '@shared/app-component-base';
 import { CountryDto, PagedResultDtoOfCountryDto } from '../../../shared/service-proxies/service-proxies';
 import { CountryServiceProxy } from 'shared/service-proxies/service-proxies';
@@ -8,8 +8,7 @@ import { CountryServiceProxy } from 'shared/service-proxies/service-proxies';
 
 @Component({
   selector: 'create-estate-modal',
-  templateUrl: './create-estate.component.html',
-  styleUrls: ['./create-estate.component.css']
+  templateUrl: './create-estate.component.html'
 })
 export class CreateEstateComponent extends AppComponentBase implements OnInit {
 
@@ -19,14 +18,14 @@ export class CreateEstateComponent extends AppComponentBase implements OnInit {
     active: boolean = false;
     saving: boolean = false;
 
-    item: EstateCreateDto = null;
+    item: StateCreateDto = null;
     countries: CountryDto[] = []; 
 
 
     @Output() modalSave: EventEmitter<any> = new EventEmitter<any>();
     constructor(
         injector: Injector,
-        private _service: EstateServiceProxy,
+        private _service: StateServiceProxy,
         private _countryService : CountryServiceProxy
     ) {
         super(injector);
@@ -41,7 +40,7 @@ export class CreateEstateComponent extends AppComponentBase implements OnInit {
 
     show(): void {
         this.active = true;
-        this.item = new EstateCreateDto();
+        this.item = new StateCreateDto();
         this.item.init({ isStatic: false, isActive:true });
 
         this.modal.show();

@@ -95,7 +95,7 @@
     <text name="RoleName">Role Name</text>
     <text name="CreateNewRole">Create new role</text>
     <text name="EditRole">Edit role</text>
-    <!-- catalog of contries-->
+    <!-- catalog of countries-->
     <text name="Countries">Países</text>
     <text name="ListCountries">Lista de Países</text>
     <text name="CountryId">Clave</text>
@@ -103,14 +103,14 @@
     <text name="CountryAbreviation">Abreviación</text>
     <text name="CreateNewCountry">Crear nuevo país</text>
     <text name="EditCountry">Editar país</text>
-    <!-- catalog of estates-->
-    <text name="Estates">Estados</text>
-    <text name="ListEstates">Lista de Estados</text>
-    <text name="EstateId">Clave</text>
-    <text name="EstateName">Estado</text>
-    <text name="EstateAbreviation">Abreviación</text>
-    <text name="CreateNewEstate">Crear nuevo estado</text>
-    <text name="EditEstate">Editar estado</text>
+    <!-- catalog of States-->
+    <text name="States">Estados</text>
+    <text name="ListStates">Lista de Estados</text>
+    <text name="StateId">Clave</text>
+    <text name="StateName">Estado</text>
+    <text name="StateAbreviation">Abreviación</text>
+    <text name="CreateNewState">Crear nuevo estado</text>
+    <text name="EditState">Editar estado</text>
     <!-- catalog of cities-->
     <text name="Cities">Ciudades</text>
     <text name="ListCities">Lista de Ciudades</text>

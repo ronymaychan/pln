@@ -18,7 +18,7 @@ export class SideBarNavComponent extends AppComponentBase {
         ]),
         new MenuItem(this.l("CatalogsMenu"), "", "menu", "", [
             new MenuItem(this.l("Countries"), "Pages.Countries", "local_offer", "/app/countries"),
-            new MenuItem(this.l("Estates"), "Pages.Estates", "local_offer", "/app/estates"),
+            new MenuItem(this.l("States"), "Pages.States", "local_offer", "/app/states"),
             new MenuItem(this.l("Cities"), "Pages.Cities", "local_offer", "/app/cities")
         ])
     ];

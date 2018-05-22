@@ -24,9 +24,10 @@ import { CitiesComponent } from '@app/cities/cities.component';
                     { path: 'roles', component: RolesComponent, data: { permission: 'Pages.Roles' }, canActivate: [AppRouteGuard] },
                     { path: 'tenants', component: TenantsComponent, data: { permission: 'Pages.Tenants' }, canActivate: [AppRouteGuard] },
                     { path: 'countries', component: CountriesComponent, data: { permission: 'Pages.Countries' }, canActivate: [AppRouteGuard] },
-                    { path: 'estates', component: EstatesComponent, data: { permission: 'Pages.Estates' }, canActivate: [AppRouteGuard] },
+                    { path: 'states', component: EstatesComponent, data: { permission: 'Pages.States' }, canActivate: [AppRouteGuard] },
                     { path: 'cities', component: CitiesComponent, data: { permission: 'Pages.Cities' }, canActivate: [AppRouteGuard] },
-                    { path: 'about', component: AboutComponent }
+                    { path: 'about', component: AboutComponent },
+                    { path: '**', pathMatch: 'full', redirectTo: 'home' }
                 ]
             }
         ])

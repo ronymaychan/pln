@@ -16,8 +16,8 @@ using System;
 namespace Plenumsoft.Migrations
 {
     [DbContext(typeof(PlenumsoftDbContext))]
-    [Migration("20180516161652_locations-catalogs")]
-    partial class locationscatalogs
+    [Migration("20180521164655_create-category")]
+    partial class createcategory
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -903,6 +903,18 @@ namespace Plenumsoft.Migrations
                     b.ToTable("AbpUsers");
                 });
 
+            modelBuilder.Entity("Plenumsoft.Domain.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("Plenumsoft.Domain.City", b =>
                 {
                     b.Property<string>("Id")
@@ -912,13 +924,13 @@ namespace Plenumsoft.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<string>("StateId");
-
                     b.Property<bool>("IsActive");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100);
+
+                    b.Property<string>("StateId");
 
                     b.HasKey("Id");
 

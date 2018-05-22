@@ -13,7 +13,7 @@ namespace Plenumsoft.Authorization
             context.CreatePermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
 
             context.CreatePermission(PermissionNames.Pages_Countries, L("Countries"));
-            context.CreatePermission(PermissionNames.Pages_Estates, L("Estates"));
+            context.CreatePermission(PermissionNames.Pages_States, L("States"));
             context.CreatePermission(PermissionNames.Pages_Cities, L("Cities"));
         }
 
